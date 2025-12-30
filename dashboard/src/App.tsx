@@ -21,32 +21,26 @@ const App = () => {
     { week: "Minggu 4", value: 50 },
   ];
 
-  // return (
-  //   <div className="p-8 bg-gray-100 min-h-screen">
-  //     <h1 className="text-3xl font-bold mb-6">Dashboard Penjualan Ubi Ungu Lumer</h1>
-
-  //     {/* Metrics */}
-  //     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-  //       <Metrics title="Total Omzet" value={totalOmzet} />
-  //     </div>
-
-  //     {/* Charts */}
-  //     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-  //       <PieChartComponent data={pieData} />
-  //       <LineChartComponent data={lineData} />
-  //     </div>
-
-  //     {/* Table */}
-  //     <TableComponent data={salesData} />
-  //   </div>
-  // );
-
   return (
-    <div>
-      <h1>Test Render</h1>
+    <div className="p-8 bg-gray-100 min-h-screen">
+      <h1 className="text-3xl font-bold mb-6">Dashboard Penjualan Ubi Ungu Lumer</h1>
+
+      {/* Metrics */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <Metrics title="Total Omzet" value={totalOmzet} />
+      </div>
+
+      {/* Charts */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <PieChartComponent data={pieData} />
+        <LineChartComponent data={lineData} />
+      </div>
+
+      {/* Table */}
+      <TableComponent data={salesData} />
     </div>
   );
-
+  
 };
 
 export default App;
