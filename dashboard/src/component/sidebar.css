@@ -1,0 +1,25 @@
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #4f46e5, #3b82f6);
+  color: white;
+  padding: 30px 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .active {
+  background: rgba(255, 255, 255, 0.2);
+}
