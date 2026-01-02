@@ -1,0 +1,24 @@
+.week {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.week h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.week p {
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+.week strong {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #4facfe;
+}
