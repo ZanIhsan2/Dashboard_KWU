@@ -1,5 +1,6 @@
 import { Line } from "react-chartjs-2";
 import { salesData } from "../../data/salesData";
+import "./SalesChart.css";
 
 import {
   Chart as ChartJS,
@@ -24,10 +25,9 @@ ChartJS.register(
 
 const options = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
-    legend: {
-      display: false, // karena hanya 1 dataset
-    },
+    legend: { display: false },
     title: {
       display: true,
       text: "Total Pembeli per Minggu (Line Chart)",
@@ -54,7 +54,32 @@ const SalesChart = () => {
     ],
   };
 
-  return <Line data={chartData} options={options} />;
+  return (
+    <div className="sales-chart-wrapper">
+      {/* KIRI: CHART */}
+      <div className="sales-chart-container">
+        <Line data={chartData} options={options} />
+      </div>
+
+      {/* KANAN: INFO */}
+      <div className="sales-chart-info">
+        <h3>Ringkasan Penjualan</h3>
+
+        <p><strong>Total Pembeli:</strong>  { 
+          chartData.datasets[0].data.reduce((a, b) => a + b, 0)
+        }</p>
+
+        <p><strong>Minggu Tertinggi:</strong> Minggu 3</p>
+        <p><strong>Rata-rata / Minggu:</strong> { 
+          Math.round(
+            chartData.datasets[0].data.reduce((a, b) => a + b, 0) / 3
+          )
+        }</p>
+
+        <p className="trend-up">📈 Tren penjualan meningkat</p>
+      </div>
+    </div>
+  );
 };
 
 export default SalesChart;

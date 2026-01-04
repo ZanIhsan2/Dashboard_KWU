@@ -1,25 +1,77 @@
 .order-table {
-  margin-top: 20px;
+  margin-top: 24px;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", system-ui, sans-serif;
 }
 
+/* Dropdown */
 .order-table select {
-  margin-bottom: 12px;
-  padding: 6px;
-  border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
+.order-table select:hover {
+  border-color: #94a3b8;
+}
+
+.order-table select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #ffffff;
+}
+
+/* Table */
 .order-table table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
+/* Header */
+.order-table th {
+  background: linear-gradient(180deg, #f8fafc, #eef2f7);
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Body */
+.order-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #475569;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Row hover */
+.order-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+.order-table td:last-child {
+  font-weight: 600;
+}
+
+/* Hilangkan border kasar */
 .order-table th,
 .order-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
+  border-left: none;
+  border-right: none;
 }
 
-.order-table th {
-  background-color: #f4f4f4;
+/* Last row clean */
+.order-table tbody tr:last-child td {
+  border-bottom: none;
 }

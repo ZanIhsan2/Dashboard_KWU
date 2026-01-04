@@ -1,0 +1,38 @@
+.sales-chart-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.sales-chart-container {
+  flex: 2;
+  height: 280px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.sales-chart-info {
+  flex: 1;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.sales-chart-info h3 {
+  margin-bottom: 12px;
+}
+
+.trend-up {
+  margin-top: 12px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .sales-chart-wrapper {
+    flex-direction: column;
+  }
+}
