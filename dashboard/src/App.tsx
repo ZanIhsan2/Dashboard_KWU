@@ -1,8 +1,20 @@
-import React from "react";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DashboardLayout from "./layouts/DashboardLayout";
 
-const App: React.FC = () => {
-  return <Dashboard />;
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Products from "./pages/Products";
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<DashboardLayout />}>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/products" element={<Products />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;

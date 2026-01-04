@@ -1,35 +1,69 @@
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+}
+
 .card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  background: #ffffff;
+  padding: 20px 22px;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hover effect */
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.08),
+    0 4px 6px rgba(0, 0, 0, 0.08);
 }
 
+/* Label / title kecil */
 .card p {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.5rem;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
 }
 
+/* Angka utama */
 .card h2 {
-  font-size: 1.4rem;
-  color: #333;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
 }
 
+/* Progress bar */
 .progress {
-  background: #eee;
-  border-radius: 6px;
+  background: #e5e7eb;
+  border-radius: 999px;
   height: 8px;
   overflow: hidden;
 }
 
+/* Progress fill */
 .progress div {
   height: 100%;
-  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+  transition: width 0.4s ease;
+}
+.progress.success div {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.progress.warning div {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
 }

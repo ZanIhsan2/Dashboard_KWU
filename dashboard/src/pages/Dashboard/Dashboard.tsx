@@ -1,4 +1,3 @@
-import Sidebar from "../../component/Sidebar/sidebar";
 import Card from "../../component/Card/card";
 import OrderTable from "../../component/Order/OrderTable";
 import SalesChart from "../../component/Chart/SalesChart";
@@ -9,7 +8,6 @@ import "./dashboard.css";
 const Dashboard = () => {
   return (
     <div className="layout">
-      <Sidebar />
 
       <main className="content">
         <header className="header">
