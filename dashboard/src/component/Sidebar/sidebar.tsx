@@ -13,7 +13,7 @@ const Sidebar = () => {
           Dashboard
         </NavLink>
 
-        <NavLink to="/reports">
+        <NavLink to="/laporan">
           <FileText size={18} />
           Laporan
         </NavLink>

@@ -60,10 +60,3 @@
   background: linear-gradient(90deg, #4f46e5, #3b82f6);
   transition: width 0.4s ease;
 }
-.progress.success div {
-  background: linear-gradient(90deg, #22c55e, #16a34a);
-}
-
-.progress.warning div {
-  background: linear-gradient(90deg, #f59e0b, #d97706);
-}

@@ -13,11 +13,11 @@ const Products = () => {
 
       {/* HEADER */}
       <header className="products-header">
-        <div>
-          <h1>Produk</h1>
-          <span>{formatDate(new Date())}</span>
+        <h1 className="page-title">Produk</h1>
+
+        <div className="header-actions">
+          <span className="page-date">{formatDate(new Date())}</span>
         </div>
-        <button className="add-product">+ Tambah Produk</button>
       </header>
 
       {/* SUMMARY */}

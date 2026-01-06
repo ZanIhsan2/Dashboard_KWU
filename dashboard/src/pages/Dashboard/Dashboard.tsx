@@ -1,5 +1,4 @@
 import Card from "../../component/Card/card";
-import OrderTable from "../../component/Order/OrderTable";
 import SalesChart from "../../component/Chart/SalesChart";
 import { salesData, totals } from "../../data/salesData";
 import { formatRupiah, formatDate } from "../../utils/formatters";
@@ -26,11 +25,6 @@ const Dashboard = () => {
         <section className="chart">
           <h2>Grafik Penjualan</h2>
           <SalesChart />
-        </section>
-
-        {/* OrderDetail */}
-        <section className="orders">
-          <OrderTable />
         </section>
         
       </main>
