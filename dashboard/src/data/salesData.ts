@@ -1,7 +1,7 @@
 export const salesData = {
-  minggu1: { keju: 0, coklat: 0, uang: 0 },
-  minggu2: { keju: 22, coklat: 30, uang: 130000 },
-  minggu3: { keju: 28, coklat: 24, uang: 130000 },
+  minggu1: { keju: 0, coklat: 0, uang: 0, pembeli: 0 },
+  minggu2: { keju: 22, coklat: 30, uang: 130000, pembeli: 10 },
+  minggu3: { keju: 28, coklat: 24, uang: 130000, pembeli: 11 },
 };
 
 export const totals = {

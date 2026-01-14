@@ -1,5 +1,6 @@
 import { Line } from "react-chartjs-2";
 import { salesData } from "../../data/salesData";
+import { ordersData } from "../../data/orderData";
 import "./SalesChart.css";
 
 import {
@@ -42,9 +43,9 @@ const SalesChart = () => {
       {
         label: "Total Pembeli",
         data: [
-          salesData.minggu1.keju + salesData.minggu1.coklat,
-          salesData.minggu2.keju + salesData.minggu2.coklat,
-          salesData.minggu3.keju + salesData.minggu3.coklat,
+          salesData.minggu1.pembeli,
+          salesData.minggu2.pembeli,
+          salesData.minggu3.pembeli,
         ],
         borderColor: "rgba(75, 192, 192, 1)",
         backgroundColor: "rgba(75, 192, 192, 0.2)",
@@ -53,6 +54,8 @@ const SalesChart = () => {
       },
     ],
   };
+
+  const totalOrders = ordersData.length;
 
   return (
     <div className="sales-chart-wrapper">
@@ -66,7 +69,7 @@ const SalesChart = () => {
         <h3>Ringkasan Penjualan</h3>
 
         <p><strong>Total Pembeli:</strong>  { 
-          chartData.datasets[0].data.reduce((a, b) => a + b, 0)
+         totalOrders       
         }</p>
 
         <p><strong>Minggu Tertinggi:</strong> Minggu 3</p>
